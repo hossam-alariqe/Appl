@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'app3.dart';
+import 'app4.dart';
+import 'login.dart';
+import 'app2.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,11 +40,11 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage('assets/profile.jpg'), 
+                    backgroundImage: AssetImage('assets/1.jpg'), 
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'حسام نبيل القباطي',
+                    ' حسام نبيل العريقي',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -55,7 +59,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => homepage()),
                 );
               },
             ),
@@ -65,7 +69,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StorePage()),
+                  MaterialPageRoute(builder: (context) => storepage()),
                 );
               },
             ),
@@ -75,17 +79,17 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SharePage()),
+                  MaterialPageRoute(builder: (context) => sharepage()),
                 );
               },
             ),
             ListTile(
               leading:const Icon(Icons.phone),
-              title: const Text(' اتصل بنا'),
+              title: const Text('تسجيل الدخول'),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ContactPage()),
+                  MaterialPageRoute(builder: (context) => login()),
                 );
               },
             ),
@@ -99,306 +103,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-    backgroundColor: Colors.amber
-                ,appBar: AppBar(
-                
-            title: const TextField(
-              decoration: InputDecoration(
-                hintText: ' السيرة الذاتية',
-                prefixIcon: Icon(Icons.search)
-              ),
-            ),
-            actions: [
-              IconButton(
-               icon:const Icon(Icons.more_vert),
-               onPressed: () {
-     },
-     ),
-              
-            ],
-    ),
-
-
-
-  
-
-    body:
-    Column(
-
-      children:[
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Center(
-            child: Container(
-              width: 400.0,
-              height: 540.0,
-              color: Colors.pink,
-              child: const Column(
-                children: [
-                  Text("الاسم : اكتب اسمك هنا",style: TextStyle(
-                    fontSize: 25.0,fontStyle: FontStyle.italic
-                  ),),
-                  Text("العمر:25",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text("الجنسية : يمني",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text("التخصص : تقنية معلومات",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text("المستوى : بكالريوس",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(": الاعمال السابقة",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-1",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-2",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-3",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(": المهارات ",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-1",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-2",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                  Text(".......-3",style: TextStyle(
-                    fontSize: 25.0,
-                  ),),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
-    ),
-      );
-    
-  }
-}
-
-class StorePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-        appBar: AppBar(title: const Text("continer"),),
-        body:
-        Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                color: Colors.blue,
-        height: 70.0,
-        width: 400.0,
-        child: const Center(
-          child: Text("i,am continer",style: TextStyle(
-                  fontSize: 30.0,
-                ),
-                ),
-        ),
-              ),
-            ),
-               const SizedBox(height: 20.0,),
-            Transform.rotate(angle: 0.1,
-              child: Container(
-
-                color: Colors.blue,
-                height: 60.0,
-                width: 400.0,
-                child: const Center(
-                  child: Text("Hai iam Slating",style: TextStyle(
-                    fontSize: 30.0
-                  ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20.0,),
-
-            Transform.rotate(angle: 0.1,
-              child: Container(
-                color: Colors.blue,
-                height: 70.0,
-                width: 500.0,
-                child: const Center(
-                  child:Text("I am also Salnting,but see my edges",style: TextStyle(
-                    fontSize: 20.0,
-                  ),),
-                ),
-              ),
-            ),
-            const SizedBox(height: 50.0,),
-            Center(
-              child: Container(
-                color: Colors.blue,
-                width: 250.0,
-                height: 250.0,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 50.0,),
-       Container(
-             color: Colors.yellow,
-             width: 150.0,
-             height: 150.0,
-             child: Column(
-               children: [
-                 const SizedBox(height: 40.0,),
-                 Container(
-                   color: Colors.green,
-                   width: 70.0,
-                   height: 70.0,
-                   child: Column(
-
-                     children: [
-                       const SizedBox(height: 20.0,),
-                       Container(
-                         color: Colors.red,
-                         width: 35.0,
-                         height: 35.0,
-                         child: Column(
-                           children: [
-                             const SizedBox(height: 10.0,),
-                             Container(
-                               color: Colors.blue,
-                               width: 15.0,
-                               height: 15.0,
-                             )
-                           ],
-                         ),
-                       )
-                     ],
-                   ),
-                 )
-               ],
-
-             ),
-       )
-
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-  }
-}
-
-class SharePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-backgroundColor: Colors.black,
-          appBar: AppBar(title: const Text("continer",style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-          ),),),
-          body:
-          Column(
-
-            children: [
-
-
-
-
-
-             const  SizedBox(height: 150.0,),
-              Center(
-                child: Container(
-
-                  color: Colors.blue,
-                  width: 300.0,
-                  height: 300.0,
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 50.0,),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          width: 220.0,
-                          height: 220.0,
-                          decoration: BoxDecoration(
-                              color: Colors.yellow,
-                           border:Border.all(
-                             color: Colors.black,
-                             width: 12,
-                           )
-                          ),
-                          child: Column(
-                            children: [
-                              const SizedBox(height: 20.0,),
-                              Transform.rotate(angle: -0.2,
-                                child: Container(
-                                  color: Colors.red,
-                                  width: 150.0,
-                                  height: 150.0,
-                                  child: Column(
-
-                                    children: [
-                                      const SizedBox(height: 20.0,),
-                                      Container(
-                                        color: Colors.red,
-                                        child: Column(
-                                          children: [
-                                            const SizedBox(height: 1.0,),
-
-                                            Container(
-
-                                              width: 100.0,
-                                              height: 100.0,
-                                              decoration: const BoxDecoration(
-                                                color: Colors.green,
-                                                borderRadius: BorderRadius.only(topLeft:Radius.circular(15),bottomLeft: Radius.circular(15),topRight: Radius.circular(45),bottomRight: Radius.circular(45)),
-                                                ),
-
-                                              child: const Column(
-
-                                                children: [
-                                                   Text("hello",style: TextStyle(
-                                                     color: Colors.white,
-                                                     fontSize: 20,
-                                                   ),),
-                                                ],
-                                              ),
-                                              ),
-
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-
-                          ),
-                        ),
-                      )
-
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        );
-  }
-}
 
 class ContactPage extends StatelessWidget {
   @override
@@ -408,7 +112,7 @@ class ContactPage extends StatelessWidget {
         title:const Text('اتصل بنا'),
       ),
       body: const Center(
-        child:  Text('مرحبا بكم في تطبيقنا'),
+        child:  Text(' 773022428 '),
       ),
     );
   }
